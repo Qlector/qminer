@@ -113,155 +113,155 @@
         ],
     },
     'targets': [
-        {
-            # unit tests module
-            'target_name': 'qminer-test',
-            'type': 'executable',
-            'sources': [
-                'test/cpp/test_main.cpp',
-                'test/cpp/test_linalg.cpp',
-                'test/cpp/test_misc.cpp',
-                'test/cpp/test_quantiles.cpp',
-                'test/cpp/test_slotted_histogram.cpp',
-                'test/cpp/test_sizeof.cpp',
-                'test/cpp/test_temaspvec.cpp',
-                'test/cpp/test_tgix.cpp',
-                'test/cpp/test_thash.cpp',
-                'test/cpp/test_thread_executor.cpp',
-                'test/cpp/test_tjsonval.cpp',
-                'test/cpp/test_tpt.cpp',
-                'test/cpp/test_tqqueue.cpp',
-                'test/cpp/test_traits.cpp',
-                'test/cpp/test_tstr.cpp',
-                'test/cpp/test_tsumspvec.cpp',
-                'test/cpp/test_tuples.cpp',
-                'test/cpp/test_tvec.cpp',
-                'test/cpp/test_zipfl.cpp'
-            ],
-            'include_dirs': [
-                'src/glib/base',
-                'src/glib/mine',
-                'src/glib/misc/',
-                'src/glib/concurrent/',
-                'src/third_party/sole/',
-                'src/third_party/libsvm/',
-                'src/third_party/streamstory/',
-                'src/third_party/geospatial/',
-                'src/qminer/',
-                'src/third_party/Snap/snap-core',
-                'src/third_party/Snap/snap-adv',
-                'src/third_party/Snap/snap-exp',
-                'src/third_party/Snap/qlib-core',
-                'src/snap_ext',
-                '<(LIN_ALG_INCLUDE)',
-                '<(LIN_EIGEN_INCLUDE)',
-                '<(NAN_LIB_PATH)'
-            ],
-            'dependencies': [
-                'glib',
-                'snap_lib',
-                'snap_ext',
-                'qminer'
-            ]
-        },
-        {
-            # node qminer module
-            'target_name': 'qm',
-            'sources': [
-                # core qm module
-                'src/nodejs/qm/qm_nodejs.h',
-                'src/nodejs/qm/qm_nodejs.cpp',
-                'src/nodejs/qm/qm_nodejs_streamaggr.h',
-                'src/nodejs/qm/qm_nodejs_streamaggr.cpp',
-                'src/nodejs/qm/qm_nodejs_store.h',
-                'src/nodejs/qm/qm_nodejs_store.cpp',
-                'src/nodejs/qm/qm_param.h',
-                # la
-                'src/nodejs/la/la_nodejs.h',
-                'src/nodejs/la/la_nodejs.cpp',
-                'src/nodejs/la/la_structures_nodejs.h',
-                'src/nodejs/la/la_structures_nodejs.cpp',
-                'src/nodejs/la/la_vector_nodejs.h',
-                # analytics
-                'src/nodejs/analytics/analytics.h',
-                'src/nodejs/analytics/analytics.cpp',
-                # fs
-                'src/nodejs/fs/fs_nodejs.h',
-                'src/nodejs/fs/fs_nodejs.cpp',
-                # snap
-                'src/nodejs/snap/snap_nodejs.h',
-                'src/nodejs/snap/snap_nodejs.cpp',
-                # ht
-                'src/nodejs/ht/ht_nodejs.h',
-                'src/nodejs/ht/ht_nodejs.cpp',
-                # statistics
-                'src/nodejs/statistics/stat_nodejs.h',
-                'src/nodejs/statistics/stat_nodejs.cpp',
-                # StreamStory
-                'src/third_party/streamstory/streamstory_node.h',
-                'src/third_party/streamstory/streamstory_node.cpp',
-                # Geospatial
-                'src/third_party/geospatial/geospatial_aggr.h',
-                'src/third_party/geospatial/geospatial_aggr.cpp',
-                # addon utilities
-                'src/nodejs/nodeutil.h',
-                'src/nodejs/nodeutil.cpp',
-                # init functions
-                'src/nodejs/modinit.h',
-                'src/nodejs/modinit.cpp',
-                'src/nodejs/nodeutil.h',
-                'src/nodejs/nodeutil.hpp',
-                'src/nodejs/analytics/analytics.h',
-                'src/nodejs/fs/fs_nodejs.h',
-                'src/nodejs/ht/ht_nodejs.h',
-                'src/nodejs/la/la_nodejs.h',
-                'src/nodejs/la/la_structures_nodejs.h',
-                'src/nodejs/la/la_vector_nodejs.h',
-                'src/nodejs/qm/qm_nodejs.h',
-                'src/nodejs/qm/qm_nodejs_store.h',
-                'src/nodejs/qm/qm_nodejs_streamaggr.h',
-                'src/nodejs/qm/qm_param.h',
-                'src/nodejs/snap/snap_nodejs.h',
-                'src/nodejs/statistics/stat_nodejs.h',
-                '<@(ADDITIONAL_QMINER_SOURCES)'
-            ],
-            'include_dirs': [
-                'src/nodejs/qm',
-                'src/nodejs/la',
-                'src/nodejs/analytics',
-                'src/nodejs/fs',
-                'src/nodejs/snap',
-                'src/nodejs/ht',
-                'src/nodejs/statistics',
-                # StreamStory
-                'src/third_party/streamstory/',
-                # Geospatial
-                'src/third_party/geospatial/',
-                'src/nodejs/',
-                'src/qminer/',
-                'src/glib/base/',
-                'src/glib/mine/',
-                'src/glib/misc/',
-                'src/glib/concurrent/',
-                'src/third_party/sole/',
-                'src/third_party/Snap/snap-core',
-                'src/third_party/Snap/snap-adv',
-                'src/third_party/Snap/snap-exp',
-                'src/third_party/Snap/qlib-core',
-                'src/snap_ext',
-                '<(NAN_LIB_PATH)',
-                '<(LIN_ALG_INCLUDE)',
-                '<(LIN_EIGEN_INCLUDE)',
-                '<@(ADDITIONAL_QMINER_INCLUDE_DIRS)'
+        # {
+        #     # unit tests module
+        #     'target_name': 'qminer-test',
+        #     'type': 'executable',
+        #     'sources': [
+        #         'test/cpp/test_main.cpp',
+        #         'test/cpp/test_linalg.cpp',
+        #         'test/cpp/test_misc.cpp',
+        #         'test/cpp/test_quantiles.cpp',
+        #         'test/cpp/test_slotted_histogram.cpp',
+        #         'test/cpp/test_sizeof.cpp',
+        #         'test/cpp/test_temaspvec.cpp',
+        #         'test/cpp/test_tgix.cpp',
+        #         'test/cpp/test_thash.cpp',
+        #         'test/cpp/test_thread_executor.cpp',
+        #         'test/cpp/test_tjsonval.cpp',
+        #         'test/cpp/test_tpt.cpp',
+        #         'test/cpp/test_tqqueue.cpp',
+        #         'test/cpp/test_traits.cpp',
+        #         'test/cpp/test_tstr.cpp',
+        #         'test/cpp/test_tsumspvec.cpp',
+        #         'test/cpp/test_tuples.cpp',
+        #         'test/cpp/test_tvec.cpp',
+        #         'test/cpp/test_zipfl.cpp'
+        #     ],
+        #     'include_dirs': [
+        #         'src/glib/base',
+        #         'src/glib/mine',
+        #         'src/glib/misc/',
+        #         'src/glib/concurrent/',
+        #         'src/third_party/sole/',
+        #         'src/third_party/libsvm/',
+        #         'src/third_party/streamstory/',
+        #         'src/third_party/geospatial/',
+        #         'src/qminer/',
+        #         'src/third_party/Snap/snap-core',
+        #         'src/third_party/Snap/snap-adv',
+        #         'src/third_party/Snap/snap-exp',
+        #         'src/third_party/Snap/qlib-core',
+        #         'src/snap_ext',
+        #         '<(LIN_ALG_INCLUDE)',
+        #         '<(LIN_EIGEN_INCLUDE)',
+        #         '<(NAN_LIB_PATH)'
+        #     ],
+        #     'dependencies': [
+        #         'glib',
+        #         'snap_lib',
+        #         'snap_ext',
+        #         'qminer'
+        #     ]
+        # },
+        # {
+        #     # node qminer module
+        #     'target_name': 'qm',
+        #     'sources': [
+        #         # core qm module
+        #         'src/nodejs/qm/qm_nodejs.h',
+        #         'src/nodejs/qm/qm_nodejs.cpp',
+        #         'src/nodejs/qm/qm_nodejs_streamaggr.h',
+        #         'src/nodejs/qm/qm_nodejs_streamaggr.cpp',
+        #         'src/nodejs/qm/qm_nodejs_store.h',
+        #         'src/nodejs/qm/qm_nodejs_store.cpp',
+        #         'src/nodejs/qm/qm_param.h',
+        #         # la
+        #         'src/nodejs/la/la_nodejs.h',
+        #         'src/nodejs/la/la_nodejs.cpp',
+        #         'src/nodejs/la/la_structures_nodejs.h',
+        #         'src/nodejs/la/la_structures_nodejs.cpp',
+        #         'src/nodejs/la/la_vector_nodejs.h',
+        #         # analytics
+        #         'src/nodejs/analytics/analytics.h',
+        #         'src/nodejs/analytics/analytics.cpp',
+        #         # fs
+        #         'src/nodejs/fs/fs_nodejs.h',
+        #         'src/nodejs/fs/fs_nodejs.cpp',
+        #         # snap
+        #         'src/nodejs/snap/snap_nodejs.h',
+        #         'src/nodejs/snap/snap_nodejs.cpp',
+        #         # ht
+        #         'src/nodejs/ht/ht_nodejs.h',
+        #         'src/nodejs/ht/ht_nodejs.cpp',
+        #         # statistics
+        #         'src/nodejs/statistics/stat_nodejs.h',
+        #         'src/nodejs/statistics/stat_nodejs.cpp',
+        #         # StreamStory
+        #         'src/third_party/streamstory/streamstory_node.h',
+        #         'src/third_party/streamstory/streamstory_node.cpp',
+        #         # Geospatial
+        #         'src/third_party/geospatial/geospatial_aggr.h',
+        #         'src/third_party/geospatial/geospatial_aggr.cpp',
+        #         # addon utilities
+        #         'src/nodejs/nodeutil.h',
+        #         'src/nodejs/nodeutil.cpp',
+        #         # init functions
+        #         'src/nodejs/modinit.h',
+        #         'src/nodejs/modinit.cpp',
+        #         'src/nodejs/nodeutil.h',
+        #         'src/nodejs/nodeutil.hpp',
+        #         'src/nodejs/analytics/analytics.h',
+        #         'src/nodejs/fs/fs_nodejs.h',
+        #         'src/nodejs/ht/ht_nodejs.h',
+        #         'src/nodejs/la/la_nodejs.h',
+        #         'src/nodejs/la/la_structures_nodejs.h',
+        #         'src/nodejs/la/la_vector_nodejs.h',
+        #         'src/nodejs/qm/qm_nodejs.h',
+        #         'src/nodejs/qm/qm_nodejs_store.h',
+        #         'src/nodejs/qm/qm_nodejs_streamaggr.h',
+        #         'src/nodejs/qm/qm_param.h',
+        #         'src/nodejs/snap/snap_nodejs.h',
+        #         'src/nodejs/statistics/stat_nodejs.h',
+        #         '<@(ADDITIONAL_QMINER_SOURCES)'
+        #     ],
+        #     'include_dirs': [
+        #         'src/nodejs/qm',
+        #         'src/nodejs/la',
+        #         'src/nodejs/analytics',
+        #         'src/nodejs/fs',
+        #         'src/nodejs/snap',
+        #         'src/nodejs/ht',
+        #         'src/nodejs/statistics',
+        #         # StreamStory
+        #         'src/third_party/streamstory/',
+        #         # Geospatial
+        #         'src/third_party/geospatial/',
+        #         'src/nodejs/',
+        #         'src/qminer/',
+        #         'src/glib/base/',
+        #         'src/glib/mine/',
+        #         'src/glib/misc/',
+        #         'src/glib/concurrent/',
+        #         'src/third_party/sole/',
+        #         'src/third_party/Snap/snap-core',
+        #         'src/third_party/Snap/snap-adv',
+        #         'src/third_party/Snap/snap-exp',
+        #         'src/third_party/Snap/qlib-core',
+        #         'src/snap_ext',
+        #         '<(NAN_LIB_PATH)',
+        #         '<(LIN_ALG_INCLUDE)',
+        #         '<(LIN_EIGEN_INCLUDE)',
+        #         '<@(ADDITIONAL_QMINER_INCLUDE_DIRS)'
 
-            ],
-            'dependencies': [
-                'glib',
-                'snap_lib',
-                'snap_ext',
-                'qminer',
-            ],
-        },
+        #     ],
+        #     'dependencies': [
+        #         'glib',
+        #         'snap_lib',
+        #         'snap_ext',
+        #         'qminer',
+        #     ],
+        # },
         {
             # qminer library
             'target_name': 'qminer',
@@ -368,16 +368,16 @@
                 '<(LIN_ALG_INCLUDE)',
                 '<(LIN_EIGEN_INCLUDE)'
             ],
-        },
-        {
-            # needed for publishing binaries with node-pre-gyp
-            'target_name': 'action_after_build',
-            'type': 'none',
-            'dependencies': [ 'qm' ],
-            'copies': [{
-                'files': [ '<(PRODUCT_DIR)/qm.node' ],
-                'destination': './out/'
-            }]
         }
+        # {
+        #     # needed for publishing binaries with node-pre-gyp
+        #     'target_name': 'action_after_build',
+        #     'type': 'none',
+        #     'dependencies': [ 'qm' ],
+        #     'copies': [{
+        #         'files': [ '<(PRODUCT_DIR)/qm.node' ],
+        #         'destination': './out/'
+        #     }]
+        # }
     ]
 }

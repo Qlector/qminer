@@ -19,8 +19,8 @@
 // web-client
 #include "webpgfetch.h"
 // web-server
-#include "websrv.h"
+//#include "websrv.h"
 // app-server
-#include "sappsrv.h"
+//#include "sappsrv.h"
 
 #endif
